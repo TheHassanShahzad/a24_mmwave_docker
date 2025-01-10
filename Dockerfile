@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y \
     python3-rosdep \
     git \
     ros-humble-xacro \
-    ros-humble-gazebo-ros \
+    # ros-humble-gazebo-ros \
     ros-humble-rviz2 \
     ros-humble-control-msgs \
     ros-humble-ros2-control \
