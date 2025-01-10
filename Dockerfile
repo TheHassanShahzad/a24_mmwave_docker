@@ -41,8 +41,8 @@ RUN mkdir -p src
 RUN git clone -b humble https://github.com/micro-ROS/micro-ROS-Agent.git /workspace/src/micro-ROS-Agent
 RUN git clone https://github.com/TheHassanShahzad/a24_mmwave.git /workspace/src/a24_mmwave
 
-# Copy your additional project repository, if any
-COPY ./src /workspace/src
+# # Copy your additional project repository, if any
+# COPY ./src /workspace/src
 
 # Install dependencies
 RUN apt-get update && rosdep install --from-paths /workspace/src --ignore-src -r -y
