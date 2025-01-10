@@ -45,7 +45,8 @@ RUN git clone https://github.com/TheHassanShahzad/a24_mmwave.git /workspace/src/
 # COPY ./src /workspace/src
 
 # Install dependencies
-RUN apt-get update && rosdep install --from-paths /workspace/src --ignore-src -r -y
+# RUN apt-get update && rosdep install --from-paths /workspace/src --ignore-src -r -y
+RUN apt-get update && rosdep install --from-paths /workspace/src --ignore-src --skip-keys=ros-humble-gazebo-ros -r -y
 
 # Build the ROS 2 workspace
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && colcon build
